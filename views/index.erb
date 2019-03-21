@@ -1,0 +1,8 @@
+<h1>All Hogwarts Students</h1>
+<% for student in @students %>
+  <p>First name: <%= student.first_name  %></p>
+  <p>Last name: <%= student.last_name %></p>
+  <p>House: <%= House.find_by_id(student.house).name %></p>
+  <p>Age: <%= student.age  %></p>
+  <br>
+<% end %>
