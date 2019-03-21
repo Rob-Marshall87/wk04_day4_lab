@@ -6,6 +6,10 @@ require_relative('./models/student')
 require_relative('./models/house')
 also_reload('./models/*')
 
+get '/hogwarts' do
+  erb(:home )
+end
+
 get '/hogwarts/students' do
   @students = Student.all
   erb( :index )
